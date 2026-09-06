@@ -13,20 +13,28 @@ viviendas en Ames, Iowa, siguiendo la metodología CRISP-DM.
 ## Estructura del repositorio
 
 ```
-├── data/
-│   ├── Ames_Iowa_Housing_Dataset.csv              # dataset original (2930 x 82)
-│   ├── Ames_Housing_Parte3_legible.csv            # dataset limpio, sin one-hot (2929 x 86)
-│   └── Ames_Housing_Parte3_listo_para_modelar.csv # dataset final, codificado (2929 x 220)
-├── notebooks/
-│   └── notebook_ames_housing.ipynb                # notebook único, ejecutable de principio a fin
-├── models/                                        # modelos entrenados (fase de Modelamiento)
-├── images/                                        # gráficos exportados del EDA
-├── informe.md                                     # informe técnico (6 secciones exigidas)
-└── README.md                                      # este archivo
+|   informe.md
+|   README.md
+|
++---data
+|       Ames_Housing_Parte3_legible.csv
+|       Ames_Housing_Parte3_listo_para_modelar.csv
+|       Ames_Iowa_Housing_Dataset.csv
+|
++---images
+|       matriz_correlacion.png
+|       relacion_Barrio.png
+|       Relacion_Terminaciones.png
+|       saleprice_distribucion.png
+|       valores_faltantes.png
+|
+\---notebooks
+        01_eda_housing.ipynb
+        dataset.ipynb
+        Preparacion_datos.ipynb
 ```
 
-> Ajusta los nombres si tu repositorio final usa otra convención — lo importante es
-> que las rutas relativas dentro del notebook (`../data/...`) coincidan con esta estructura.
+
 
 ---
 
@@ -43,8 +51,6 @@ numpy
 matplotlib
 ```
 
-> Cuando el equipo llegue a la fase de Modelamiento probablemente necesiten agregar
-> `scikit-learn` — se deja fuera por ahora porque el notebook, tal como está, no la usa.
 
 Puedes instalarlas todas con:
 
